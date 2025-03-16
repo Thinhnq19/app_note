@@ -13,7 +13,7 @@ const SplashScreen = () => {
                     <Image source={require('../assets/images/img_logo.png')} style={styles.img_logo}></Image>
                     <Text style={styles.splash_text}>Ghi chú của bạn</Text>
                     <LottieView
-                        source={require('../json/Qh0oFhUFBy.json')}
+                        source={require('../json/Animation - 1742124525770.json')}
                         autoPlay
                         loop
                         style={styles.animation}
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     splash_text: { color: 'white', fontWeight: 'bold', fontSize: width * 0.08, },
     animation: {
         position: 'absolute', // Đặt animation lên trên
-        width: width * 0.71, // 40% chiều rộng màn hình
+        width: width * 0.80, // 40% chiều rộng màn hình
         height: width * 0.46, // Tương ứng để giữ tỉ lệ
         zIndex: 1, // Đảm bảo animation nằm trên hình nền
         top: height * 0.75, // Tùy chỉnh khoảng cách từ đáy (40% chiều cao)
