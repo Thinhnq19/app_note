@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View, Image, Dimensions, StatusBar,Platform } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Image, Dimensions, StatusBar, Platform } from 'react-native'
+import React, { useEffect }from 'react'
 import LottieView from 'lottie-react-native';
 
 const { width, height } = Dimensions.get('window');
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+    useEffect(() => {
+        // Sau 3 giây, chuyển hướng đến màn hình Login
+        setTimeout(() => {
+            navigation.replace('homescreen'); // Dùng replace để không thể quay lại SplashScreen
+        }, 7000); // 3000ms = 3 giây
+    }, [navigation]);
     return (
         <View style={styles.safeArea}>
             <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" />
